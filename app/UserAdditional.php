@@ -7,4 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class UserAdditional extends Model
 {
     protected $table = 'user_additionals';
+
+    public function users(){
+        return $this->belongsTo('App\User');
+    }
 }
